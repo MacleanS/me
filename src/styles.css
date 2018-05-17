@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
+
+body {
+    background: #aaa;
+    font-family: "Pontano Sans";
+    color: white;
+    margin: 0;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: center;
+    background: #333;   
+    height: 3em;
+}
+
+.main-nav a {
+    color:white;
+    padding: 0 1em;
+}
+.main-nav .main-nav__hamburger {
+    display: none;
+}
+
+@media only screen and (max-width: 640px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .main-nav .main-nav__hamburger {
+        display: block;
+        position: absolute;
+        right: 1em;
+    }
+
+    .main-nav .main-nav__links {
+        display: none;
+    }
+}
