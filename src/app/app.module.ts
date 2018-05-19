@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { SkillsService } from './services/skills.service';
 
 const appRoutes: Routes = [
   // { path: 'crisis-center', component: CrisisListComponent },
@@ -16,8 +19,17 @@ const appRoutes: Routes = [
     redirectTo: '/',
     pathMatch: 'full'
   },{
+    path: '',
+    component: HomeComponent
+  },{
+    path: 'home',
+    component: HomeComponent
+  },{
     path: 'about',
     component: AboutComponent
+  },{
+    path: 'contact',
+    component: ContactComponent
   }
   // { path: '**', component: PageNotFoundComponent }
 ];
@@ -26,13 +38,15 @@ const appRoutes: Routes = [
 @NgModule({  
   declarations: [
     AppComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      // { enableTracing: true } // <-- debugging purposes only
     )
   ],
   providers: [],

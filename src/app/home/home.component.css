@@ -1,0 +1,17 @@
+.main-header {
+    text-align: center;
+    font-size: 30px;
+}
+
+.main-header__image {
+    border-radius: 5em;
+}
+
+.skills-container {
+    background: #00abff;
+    color: white;
+}
+
+.skills-container__skills-list {
+    text-align: center;
+}
