@@ -3,13 +3,33 @@
 
 body {
     font-family: "Pontano Sans";
-    color: #555;
+    color: #ffffff;
     margin: 0;
-    background: #eef7ff;
+}
+
+/* Colour palette */
+.mint {
+    background: #25f3b2;
+}
+
+.pink {
+    background: #EF767A;
+}
+
+.yellow {
+    background: #FFE74C;
+}
+
+.grey {
+    background: #233D4D;
 }
 
 .orange {
-    background: #f26425;
+    background: #EEB868;
+}
+
+.blue {
+    background: #3E78B2;
 }
 
 .small-font {
@@ -18,7 +38,6 @@ body {
 .main-nav {
     display: flex;
     justify-content: center;
-    background: #00abff;
     height: 3em;
 }
 

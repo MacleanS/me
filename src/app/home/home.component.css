@@ -14,8 +14,7 @@
 }
 
 .skills-container {
-    background: #00abff;
-    color: white;
+    color: #eeeeee;
 }
 
 .skills-container__skills-list {
@@ -23,5 +22,14 @@
 }
 
 .skills-container__skill-image {
-    height:3em;
+    font-size: 50px;
+}
+
+.skills-container__skill{
+    display: inline-block;
+    padding: 0 2em;
+}
+
+hr {
+    width: 50%;
 }
