@@ -5,8 +5,16 @@ body {
     font-family: "Pontano Sans";
     color: #555;
     margin: 0;
+    background: #eef7ff;
 }
 
+.orange {
+    background: #f26425;
+}
+
+.small-font {
+    font-size:x-small;
+}
 .main-nav {
     display: flex;
     justify-content: center;

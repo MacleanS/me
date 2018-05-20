@@ -7,6 +7,12 @@
     border-radius: 5em;
 }
 
+.blurb {
+    text-align: center;
+    font-size: 20px;
+    margin: 0 4em;
+}
+
 .skills-container {
     background: #00abff;
     color: white;
@@ -14,4 +20,8 @@
 
 .skills-container__skills-list {
     text-align: center;
+}
+
+.skills-container__skill-image {
+    height:3em;
 }
