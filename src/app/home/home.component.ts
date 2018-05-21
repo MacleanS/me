@@ -9,10 +9,22 @@ import { SKILLS } from '../skills';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private skillsService: SkillsService) { }
+  animationClass: {[k: string]: any} = {};
+
+  constructor(private skillsService: SkillsService) {
+  }
 
   ngOnInit() {
-    console.log(this.frontendSkills)
+    this.animationClass.image = 'fade-in-image'
+    // setTimeout(()=> {
+    //   this.animationClass.image = 'fade-in-image';
+    // },300)
+    
+    setTimeout(()=>{
+      this.animationClass.text = 'fade-in-text'
+      this.animationClass.image = '';
+      this.animationClass.skills = 'fade-in-image'
+    },1000);
   }
   
   allSkills = this.skillsService.getSkills();

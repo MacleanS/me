@@ -6,15 +6,9 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { SkillsService } from './services/skills.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const appRoutes: Routes = [
-  // { path: 'crisis-center', component: CrisisListComponent },
-  // { path: 'hero/:id',      component: HeroDetailComponent },
-  // {
-  //   path: 'heroes',
-  //   component: HeroListComponent,
-  //   data: { title: 'Heroes List' }
-  // },
   { path: '',
     redirectTo: '/',
     pathMatch: 'full'
@@ -44,6 +38,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserModule, 
+    BrowserAnimationsModule,
     RouterModule.forRoot(
       appRoutes,
       // { enableTracing: true } // <-- debugging purposes only

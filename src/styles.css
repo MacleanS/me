@@ -3,42 +3,69 @@
 
 body {
     font-family: "Pontano Sans";
-    color: #ffffff;
     margin: 0;
 }
 
 /* Colour palette */
-.mint {
+.background__mint {
     background: #25f3b2;
 }
 
-.pink {
+.background__pink {
     background: #EF767A;
 }
 
-.yellow {
+.background__yellow {
     background: #FFE74C;
 }
 
-.grey {
+.background__grey {
     background: #233D4D;
 }
 
-.orange {
+.background__orange {
     background: #EEB868;
 }
 
-.blue {
+.background__blue {
     background: #3E78B2;
 }
+.color__white {
+    color: #fff;
+}
 
+.color__mint {
+    color: #25f3b2;
+}
+
+.color__pink {
+    color: #EF767A;
+}
+
+.color__yellow {
+    color: #FFE74C;
+}
+
+.color__grey {
+    color: #233D4D;
+}
+
+.color__orange {
+    color: #EEB868;
+}
+
+.color__blue {
+    color: #3E78B2;
+}
 .small-font {
     font-size:x-small;
 }
 .main-nav {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     height: 3em;
+    align-items: center;
+    flex-direction: row-reverse;
 }
 
 .main-nav a {

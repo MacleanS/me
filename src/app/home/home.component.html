@@ -1,16 +1,23 @@
-<div class="main-header">
-  <h1>Hi, I'm Sam</h1>
-  <img class="main-header__image" src="../../assets/img/me.jpg">
-  <p>Front-end developer</p>
+<div class="pure-g main-header color__white" >
+  <div class="pure-u-1 pure-u-lg-1-4 main-header__image-container" [ngClass]="animationClass.image">
+    <img class="main-header__image" src="../../assets/img/me.jpg">
+    <p>Front-end developer</p>
+  </div>
+  <div class="pure-u-1 pure-u-lg-1-2 blurb color__white" *ngIf="animationClass.image !== 'fade-in-image'" [ngClass]="animationClass.text">
+      <p>Hello! I'm Sam, and I have been working in front-end development for the last 2 years, but programming for the last 7.
+          I started off as an analyst where my love for coding grew, but my love for analytics eventually died. Towards the end of my
+          analyst career, I started dabbling in some front-end work using native javaScript and found a new calling in life.
+          <br>
+          <br>
+          I thoroughly enjoy the problem solving aspects in the field, and creating the best UX for the application I'm working on. 
+          I'm no stranger to data visualisation either - not all that time as an analyst was wasted!
+          Below are the skills I most commonly use on the job.</p>
+  </div>
+  <div class="pure-u-1 pure-u-lg-1-4"></div>
 </div>
-<div class="blurb">
-  <p>I have been working in front-end development for 2 years, and have loved almost every minute of it.
-    I thoroughly enjoy the problem solving aspects in the field, and creating the best UX for the application I'm working on.
-    Below are the skills I most commonly use on the job.</p>
-</div>
-<div class="skills-container">
+<div class="skills-container" *ngIf="animationClass.image !== 'fade-in-image'" [ngClass]="animationClass.skills">
   <div class="pure-g">
-    <div class="pure-u-1 skills-container__skills-list frontend">
+    <div class="pure-u-1 skills-container__skills-list frontend color__white">
       <h4>Front end stuff</h4>
       <div *ngFor="let skill of frontendSkills" class="skills-container__skill">
         <i class="skills-container__skill-image {{skill.image}}"></i>
@@ -18,7 +25,7 @@
       </div>
       <hr>
     </div>
-    <div class="pure-u-1 skills-container__skills-list backend">
+    <div class="pure-u-1 skills-container__skills-list backend color__white">
       <h4>Back end stuff</h4>
       <div *ngFor="let skill of backendSkills" class="skills-container__skill">
           <i class="skills-container__skill-image {{skill.image}}"></i>
@@ -26,7 +33,7 @@
       </div>
       <hr>
     </div>
-    <div class="pure-u-1 skills-container__skills-list project-management">
+    <div class="pure-u-1 skills-container__skills-list project-management color__white">
       <h4>Other stuff</h4>
       <div *ngFor="let skill of projectManagementSkills" class="skills-container__skill">
         <i class="skills-container__skill-image {{skill.image}}"></i>
