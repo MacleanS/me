@@ -44,6 +44,10 @@ hr {
     animation: FadeInImage 1s ease-out;
 }
 
+.swell-image {
+    animation: SwellImage 1s ease;
+}
+
 .fade-in-text {
     animation: FadeInText 1s ease-out;
 }
@@ -58,7 +62,14 @@ hr {
 
 @keyframes FadeInImage {
     0% {opacity: 0; width:100%;}
+    75% {width:100%;}
     100% {opacity:1;};
+}
+
+@keyframes SwellImage {
+    0% {height:0}
+    50% {height: 240px}
+    80% {height: 200px}
 }
 
 @keyframes FadeInText {

@@ -15,15 +15,15 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.animationClass.image = 'fade-in-image'
-    // setTimeout(()=> {
-    //   this.animationClass.image = 'fade-in-image';
-    // },300)
+
+    this.animationClass.imageContainer = 'fade-in-image';
+    this.animationClass.image = 'swell-image'
     
     setTimeout(()=>{
       this.animationClass.text = 'fade-in-text'
-      this.animationClass.image = '';
       this.animationClass.skills = 'fade-in-image'
+      this.animationClass.imageContainer = '';
+      this.animationClass.image = '';
     },1000);
   }
   
