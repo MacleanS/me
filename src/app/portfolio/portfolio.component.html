@@ -1,0 +1,14 @@
+<button (click)="getCardsByClass('mage')">Get mage cards</button>
+<button (click)="getCardsByClass('rogue')">Get rogue cards</button>
+<button (click)="getCardsByClass('shaman')">Get shaman cards</button>
+<button (click)="getCardsByClass('warrior')">Get warrior cards</button>
+<button (click)="getCardsByClass('druid')">Get druid cards</button>
+
+<div *ngFor="let card of cardsToDisplay; let i=index">
+  <div *ngIf="i<50" style="color:white;">
+    Name: {{ card.name }}
+    Type: {{ card.type }}
+    <img *ngIf="card.imgGold" src={{card.imgGold}}  onerror="this.src='assets/img/me.jpg'">
+    <img *ngIf="card.img" src={{card.img}}  onerror="this.src='assets/img/me.jpg'">
+  </div>
+</div>
