@@ -11,6 +11,7 @@ import { HearthstoneService } from './services/hearthstone/hearthstone.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { Observable } from 'rxjs';
+import { HearthstoneComponent } from './portfolio/components/hearthstone/hearthstone.component';
 
 const appRoutes: Routes = [
   { path: '',
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    HearthstoneComponent
   ],
   imports: [
     BrowserModule,

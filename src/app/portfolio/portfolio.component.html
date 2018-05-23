@@ -1,14 +1,8 @@
-<button (click)="getCardsByClass('mage')">Get mage cards</button>
-<button (click)="getCardsByClass('rogue')">Get rogue cards</button>
-<button (click)="getCardsByClass('shaman')">Get shaman cards</button>
-<button (click)="getCardsByClass('warrior')">Get warrior cards</button>
-<button (click)="getCardsByClass('druid')">Get druid cards</button>
+<h2 class="color__white">
+    I don't really have an extensive portfolio due to all the Non-Disclosure Agreements that I've signed, 
+    but hopefully what I've got on this page is enough to showcase some work.
+</h2>
 
-<div *ngFor="let card of cardsToDisplay; let i=index">
-  <div *ngIf="i<50" style="color:white;">
-    Name: {{ card.name }}
-    Type: {{ card.type }}
-    <img *ngIf="card.imgGold" src={{card.imgGold}}  onerror="this.src='assets/img/me.jpg'">
-    <img *ngIf="card.img" src={{card.img}}  onerror="this.src='assets/img/me.jpg'">
-  </div>
+<div class="hearthstone-container">
+    <app-hearthstone></app-hearthstone>
 </div>
