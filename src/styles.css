@@ -7,6 +7,10 @@ body {
 }
 
 /* Colour palette */
+.background__white {
+    background: #fff;
+}
+
 .background__mint {
     background: #25f3b2;
 }

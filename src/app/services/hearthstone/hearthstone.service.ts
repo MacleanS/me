@@ -11,13 +11,11 @@ export class HearthstoneService {
     return this.http.get("http://localhost:3000/api/cardInfo")
   }
 
-  getAllCards(cost, attack, health) {
+  getFilteredCards(params) {
 
-    let params = new HttpParams();
+    // let params = new HttpParams();
 
-    params = params.append('cost', cost);
-    params = params.append('attack', attack);
-    params = params.append('health', health);
+
     
     return this.http.get("http://localhost:3000/api/card", {params: params})
   }

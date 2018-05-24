@@ -1,0 +1,29 @@
+.hearthstone-cards{
+
+}
+
+.hearthstone-cards__empty{
+    background: red;
+}
+
+.hearthstone-cards__container {
+    
+}
+ 
+.hearthstone-cards__card {
+    background: url('../../../../../../assets/img/hearthstone-background2.jpg');
+    background-size: contain;
+    text-align: center;
+}
+
+.hearthstone-cards__card--image {
+    height:450px; 
+}
+
+img {
+    height:100%;
+    width: auto;
+}
+.hearthstone-cards__card--info {
+    margin: 3em;
+}

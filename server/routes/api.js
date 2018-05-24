@@ -6,7 +6,7 @@ const unirest = require('unirest');
 const HS_Url = "https://omgvamp-hearthstone-v1.p.mashape.com"
 
 // for building URL query from request params
-serialize = function(obj) {
+serialise = function(obj) {
   var str = [];
   for (var p in obj)
     if (obj.hasOwnProperty(p)) {
@@ -29,8 +29,8 @@ router.get('/cardInfo', (req, res) => {
 });
 
 router.get('/card', (req, res) => {
-  // serialize(req.query) returns the ?query=string&whater=something needed to return specific cards
-  unirest.get("https://omgvamp-hearthstone-v1.p.mashape.com/cards?" + serialize(req.query))
+  // serialise(req.query) returns the ?query=string&whater=something needed to return specific cards
+  unirest.get("https://omgvamp-hearthstone-v1.p.mashape.com/cards?" + serialise(req.query))
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
   .end(function (result) {

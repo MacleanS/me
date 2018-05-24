@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HearthstoneService } from '../../../services/hearthstone/hearthstone.service';
+import { HttpParams } from '@angular/common/http';
+import { cards } from './interfaces/cardsCollection';
 
 @Component({
   selector: 'app-hearthstone',
@@ -16,37 +18,43 @@ export class HearthstoneComponent implements OnInit {
   };
 
   private cardInfo = {}
-  private card = {}
+  private cards = {}
   private cardsToDisplay: any;
 
-  constructor(private hearthstoneService: HearthstoneService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.getCardInfo();
-    this.getCard();
+    // this.getCard();
   }
 
-  getCard() {
-    this.hearthstoneService.getAllCards(3,3,3).subscribe(data => {
-      this.card = data;
-      console.log('getCard() data',this.card);
-    })
+  isCardCollection(object: any): object is cards {
+    // really basic check to see if event is card collection...
+    return 'Basic' in object;
   }
 
-  getCardInfo() {
-    this.loading.allInfo = true;
-    this.hearthstoneService.getAllCardInfo().subscribe(data => {
-      this.cardInfo = data;
-      this.loading.allInfo = false;
-    })
-  }
+  cardsChanged(event) {
+    if(this.isCardCollection(event)) {
+      this.cardsToDisplay = event;
+      console.log('Change event!!', this.cardsToDisplay);
+    }
+}
 
-  getCardsByClass(className:string) {
-    this.loading.cards = true;
-    this.hearthstoneService.getByClass(className).subscribe( data => {
-      this.loading.cards = false;
-      this.cardsToDisplay = data;
-      console.log(this.cardsToDisplay);
-    })
-  }
+  // getCard() {
+  //   this.hearthstoneService.getAllCards(3,3,3).subscribe(data => {
+  //     this.cards = data;
+  //     console.log('getCard() data',this.cards);
+  //   })
+  // }
+
+
+
+  // getCardsByClass(className:string) {
+  //   this.loading.cards = true;
+  //   this.hearthstoneService.getByClass(className).subscribe( data => {
+  //     this.loading.cards = false;
+  //     this.cardsToDisplay = data;
+  //     console.log(this.cardsToDisplay);
+  //   })
+  // }
+
 }

@@ -1,0 +1,12 @@
+<form #f="ngForm" (ngSubmit)="submit(f)" novalidate>
+  <label for="cost">
+    <input name="cost" type="text" ngModel>
+  </label>
+  <label for="attack">
+    <input name="attack" type="text" ngModel>
+  </label>
+  <label for="health">
+    <input name="health" type="text" ngModel>
+  </label>
+  <button>Submit</button>
+</form>

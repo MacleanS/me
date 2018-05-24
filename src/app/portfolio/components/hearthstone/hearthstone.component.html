@@ -5,7 +5,13 @@
 <div class="loading__all-info color__white" *ngIf="loading.allInfo">
   Just loading information...
 </div>
-<div class="dropdown-container" *ngIf="!loading.allInfo">
+<app-input-form
+    (change)="cardsChanged($event)">
+</app-input-form>
+<app-cards-container 
+  [cards]="cardsToDisplay">
+</app-cards-container>
+<!-- <div class="dropdown-container" *ngIf="!loading.allInfo">
   <div class="dropdown-container__dropdown">
     <select name="class">
         <option *ngFor="let class of cardInfo.classes">
@@ -41,7 +47,7 @@
           </option>
       </select> 
     </div>
-</div>
+</div> -->
 
 
 <!-- <button (click)="getCardsByClass('mage')">Get mage cards</button>

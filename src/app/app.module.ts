@@ -12,6 +12,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { Observable } from 'rxjs';
 import { HearthstoneComponent } from './portfolio/components/hearthstone/hearthstone.component';
+import { InputFormComponent } from './portfolio/components/hearthstone/components/input-form/input-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CardsContainerComponent } from './portfolio/components/hearthstone/components/cards-container/cards-container.component';
+import { KeysPipe } from './keys.pipe';
 
 const appRoutes: Routes = [
   { path: '',
@@ -44,13 +48,18 @@ const appRoutes: Routes = [
     ContactComponent,
     HomeComponent,
     PortfolioComponent,
-    HearthstoneComponent
+    HearthstoneComponent,
+    InputFormComponent,
+    CardsContainerComponent,
+    KeysPipe
   ],
   imports: [
     BrowserModule,
     BrowserModule, 
     BrowserAnimationsModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(
       appRoutes,
       // { enableTracing: true } // <-- debugging purposes only
