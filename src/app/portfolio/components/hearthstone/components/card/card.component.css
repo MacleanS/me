@@ -1,0 +1,21 @@
+.card {
+    background: url('../../../../../../assets/img/hearthstone-background.jpg');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+    width: 837px;
+    height: 469px;
+}
+
+.card__image {
+    position: relative;
+    bottom: 1em;
+    left: 2em;
+}
+
+.card__info {
+    color: white;
+    box-shadow: #1f282b -3px 1px 12px 5px;
+    position: relative;
+    height: 20em;
+}

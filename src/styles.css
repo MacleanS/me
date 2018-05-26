@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Pontano+Sans');
 
+html, 
+body {
+    height: 100%;
+}
+
 body {
     font-family: "Pontano Sans";
     margin: 0;
@@ -25,6 +30,12 @@ body {
 
 .background__grey {
     background: #233D4D;
+}
+
+.background__grey--gradient {
+    background: #0F2027;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .background__orange {
