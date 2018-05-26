@@ -14,8 +14,16 @@
 }
 
 .card__info {
-    color: white;
     box-shadow: #1f282b -3px 1px 12px 5px;
     position: relative;
     height: 20em;
+    background: url('../../../../../../assets/img/parchment.png');
+    margin: 4em 3em 5em 7em;
+    padding: 1em 2em 0 1em;
+    overflow: auto;
+}
+.card__error {
+    height: 410px;
+    width: 289px;
+    padding-top: 3em;    
 }

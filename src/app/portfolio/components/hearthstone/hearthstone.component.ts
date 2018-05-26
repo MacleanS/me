@@ -35,7 +35,6 @@ export class HearthstoneComponent implements OnInit {
   cardsChanged(event) {
     if(this.isCardCollection(event)) {
       this.cardsToDisplay = event;
-      console.log('Change event!!', this.cardsToDisplay);
     }
 }
 

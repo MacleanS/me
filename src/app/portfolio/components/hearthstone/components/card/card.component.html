@@ -2,16 +2,16 @@
   <div class="pure-g">
     <div class="pure-u-1-2">
       <div class="card__image">
-        <img src="{{ card.img }}">
+        <img src="{{ card.img }}" onerror="this.className='card__error'; this.src='../../../../../../assets/img/card404.png'">
       </div>
     </div>
     <div class="pure-u-1-2">
-      <div class="card__info">
-        <p>name: <strong>{{ card.name }}</strong></p>
-        <p>attack: <strong>{{ card.attack }}</strong></p>
-        <p>health: <strong>{{ card.health }}</strong></p>
-        <p>cost: <strong>{{ card.cost }}</strong></p>
-        <p><em>{{ card.flavor }}</em></p>
+      <div class="card__info color__grey">
+        <p *ngIf="card.name">Name: <strong>{{ card.name }}</strong></p>
+        <p *ngIf="card.race">Race: <strong>{{ card.race }}</strong></p>
+        <p *ngIf="set">Set: <strong>{{ set }}</strong></p>
+        <p *ngIf="card.artist">Artist: <strong>{{ card.artist }}</strong></p>
+        <p *ngIf="card.flavor"><em>{{ card.flavor }}</em></p>
       </div>
     </div>
   </div>

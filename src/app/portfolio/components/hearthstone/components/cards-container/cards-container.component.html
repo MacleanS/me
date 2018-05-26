@@ -1,14 +1,14 @@
 <div class="hearthstone-cards">
-  <div *ngIf="!cards" class="hearthstone-cards__empty">
-    Input some paramters to see some cards!
+  <div *ngIf="!cards" class="color__white">
+    <p>Enter some inputs above</p>
   </div>
   <div *ngIf="cards">
     <div *ngFor="let key of cards | keys">
-      <div *ngFor="let card of cards[key]">
-        <app-card [card]="card"
-                  [set]="key">
-        </app-card>
-      </div>
+      <app-card 
+                *ngFor="let card of cards[key]"
+                [card]="card"
+                [set]="key">
+      </app-card>
     </div>
   </div>
 </div>

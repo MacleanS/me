@@ -1,11 +1,4 @@
-
-.hearthstone-cards__empty{
-    background: red;
-}
-
 .hearthstone-cards__card {
-    /* background: url('../../../../../../assets/img/hearthstone-background2.jpg'); */
-    /* background-size: contain; */
     background:white;
     text-align: center;
 }

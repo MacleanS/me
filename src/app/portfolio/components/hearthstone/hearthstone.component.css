@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+app-input-form {
+    padding: 1em;
+}
+
 .hearthstone-header__image {
     height:100%;
 }

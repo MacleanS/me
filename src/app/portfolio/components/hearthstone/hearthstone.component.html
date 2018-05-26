@@ -2,71 +2,15 @@
 <div class="hearthstone-header">
   <img class="hearthstone-header__image" src="../../../../assets/img/hearthstone.png">
 </div>
-<div class="loading__all-info color__white" *ngIf="loading.allInfo">
-  Just loading information...
-</div>
-<app-input-form
-    (change)="cardsChanged($event)">
-</app-input-form>
-<app-cards-container 
-  [cards]="cardsToDisplay">
-</app-cards-container>
-<!-- <div class="dropdown-container" *ngIf="!loading.allInfo">
-  <div class="dropdown-container__dropdown">
-    <select name="class">
-        <option *ngFor="let class of cardInfo.classes">
-            {{ class }}
-        </option>
-    </select> 
+<div class="pure-g">
+  <div class="pure-u-lg-1-4 pure-u-1"></div>
+  <div class="pure-u-lg-1-2 pure-u-1">
+    <app-input-form
+      (change)="cardsChanged($event)">
+    </app-input-form>
+    <app-cards-container 
+      [cards]="cardsToDisplay">
+    </app-cards-container>
   </div>
-    <div class="dropdown-container__dropdown">
-      <select name="type">
-          <option *ngFor="let type of cardInfo.types">
-              {{ type }}
-          </option>
-      </select> 
-    </div>
-    <div class="dropdown-container__dropdown">
-      <select name="faction">
-          <option *ngFor="let faction of cardInfo.factions">
-              {{ faction }}
-          </option>
-      </select> 
-    </div>
-    <div class="dropdown-container__dropdown">
-      <select name="quality">
-          <option *ngFor="let quality of cardInfo.qualities">
-              {{ quality }}
-          </option>
-      </select> 
-    </div>
-    <div class="dropdown-container__dropdown">
-      <select name="race">
-          <option *ngFor="let race of cardInfo.races">
-              {{ race }}
-          </option>
-      </select> 
-    </div>
-</div> -->
-
-
-<!-- <button (click)="getCardsByClass('mage')">Get mage cards</button>
-<button (click)="getCardsByClass('rogue')">Get rogue cards</button>
-<button (click)="getCardsByClass('shaman')">Get shaman cards</button>
-<button (click)="getCardsByClass('warrior')">Get warrior cards</button>
-<button (click)="getCardsByClass('druid')">Get druid cards</button> -->
-
-<!-- <div *ngIf="loading">
-  LOADING...
+  <div class="pure-u-lg-1-4 pure-u-1"></div>
 </div>
-
-<div *ngIf="!loading">
-  <div *ngFor="let card of cardsToDisplay; let i=index">
-    <div *ngIf="i<50" style="color:white;">
-      Name: {{ card.name }}
-      Type: {{ card.type }}
-      <img *ngIf="card.imgGold" src={{card.imgGold}}  onerror="this.src='assets/img/me.jpg'">
-      <img *ngIf="card.img" src={{card.img}}  onerror="this.src='assets/img/me.jpg'">
-    </div>
-  </div>
-</div> -->

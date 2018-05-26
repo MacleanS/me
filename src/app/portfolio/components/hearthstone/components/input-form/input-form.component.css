@@ -1,0 +1,23 @@
+label {
+    color: white;
+    font-weight: 800;
+}
+.error {
+    color: #d82b2b;
+    position: absolute;
+    padding-top: 1.3em;
+ }
+
+.card-input {
+    padding: 0.1em;
+    background: url('../../../../../../assets/img/parchment.PNG');
+    margin: 1em;
+    color: white;
+    font-weight: 800;
+    border: #f1e3ca 3px solid;
+}
+
+.submit-button {
+    padding: 0.5em;
+    box-shadow: black 3px 1px 8px 1px;
+}

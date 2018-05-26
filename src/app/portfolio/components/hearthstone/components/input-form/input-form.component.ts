@@ -19,6 +19,7 @@ export class InputFormComponent implements OnInit {
 
   private cardsToDisplay: any;
   private cardInfo: any;
+  private validFormState: boolean = true;
 
   constructor(private hearthstoneService: HearthstoneService) { }
 
@@ -33,14 +34,24 @@ export class InputFormComponent implements OnInit {
     })
   }
 
+  valid(f: NgForm) {
+    this.validFormState = f.valid;
+
+    return f.valid;
+  }
+
   submit(f: NgForm) {
 
+    if(!this.valid(f)) 
+      return;
+    
     this.loading.cards = true;
 
     let params = new HttpParams();
 
     for (let key in f.value) {
-      params = params.append(key, f.value[key]);
+      if(f.value[key])
+        params = params.append(key, f.value[key]);
     }
 
     this.hearthstoneService.getFilteredCards(params).subscribe( data => {
