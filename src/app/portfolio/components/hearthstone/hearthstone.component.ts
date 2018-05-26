@@ -19,7 +19,7 @@ export class HearthstoneComponent implements OnInit {
 
   private cardInfo = {}
   private cards = {}
-  private cardsToDisplay: any;
+  private cardsToDisplay: any = [];
 
   constructor() { }
 
@@ -33,27 +33,18 @@ export class HearthstoneComponent implements OnInit {
   }
 
   cardsChanged(event) {
+    // flatten data object into more usable format
     if(this.isCardCollection(event)) {
-      this.cardsToDisplay = event;
+      let cardsArray = [];
+
+      Object.keys(event).forEach(function(set) {
+        event[set].forEach(function(card) {
+          cardsArray.push(card)
+        })
+      })
+
+      this.cardsToDisplay = cardsArray;
     }
-}
-
-  // getCard() {
-  //   this.hearthstoneService.getAllCards(3,3,3).subscribe(data => {
-  //     this.cards = data;
-  //     console.log('getCard() data',this.cards);
-  //   })
-  // }
-
-
-
-  // getCardsByClass(className:string) {
-  //   this.loading.cards = true;
-  //   this.hearthstoneService.getByClass(className).subscribe( data => {
-  //     this.loading.cards = false;
-  //     this.cardsToDisplay = data;
-  //     console.log(this.cardsToDisplay);
-  //   })
-  // }
+  }
 
 }

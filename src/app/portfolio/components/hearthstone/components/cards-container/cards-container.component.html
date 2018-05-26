@@ -3,12 +3,14 @@
     <p>Enter some inputs above</p>
   </div>
   <div *ngIf="cards">
-    <div *ngFor="let key of cards | keys">
-      <app-card 
-                *ngFor="let card of cards[key]"
-                [card]="card"
-                [set]="key">
-      </app-card>
+    <div *ngFor="let card of cards; let i = index;">
+      <div *ngIf="i < cardLimit">
+        <app-card [card]="card">
+        </app-card>
+      </div>
     </div>
   </div>
+  <button class="button color__white background__grey" *ngIf="cardLimit <= cards.length && cards"(click)="increaseLimit()">
+    Show more cards ({{ cardLimit }} / {{ cards.length }})
+  </button>
 </div>

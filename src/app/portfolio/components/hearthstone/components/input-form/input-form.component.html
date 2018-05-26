@@ -1,34 +1,40 @@
 <div class="pure-g">
-  <div class="pure-u-1-2 pure-u-lg-1-4">
+  <div class="pure-u-sm-1-2 pure-u-1 pure-u-lg-1-4">
     <form #f="ngForm" (ngSubmit)="submit(f)">
       <div class="pure-g">
-        <div class="pure-u-1-2">
+        <div class="pure-u-sm-1-2 pure-u-1 label">
           <label for="cost">
             Cost*
           </label>
         </div>  
-        <div class="pure-u-1-2">
+        <div class="pure-u-sm-1-2 pure-u-1">
           <input class="card-input" name="cost" type="number" ngModel required min="0" max="10" placeholder="0-10">
           <span *ngIf="!validFormState" class="error">Please enter a cost (between 0 and 10)</span>
         </div>
-        <div class="pure-u-1-2">
+        <div class="pure-u-sm-1-2 pure-u-1 label">
           <label for="attack">
             Attack
           </label>
         </div>
-        <div class="pure-u-1-2">
+        <div class="pure-u-sm-1-2 pure-u-1">
           <input class="card-input" name="attack" type="number" ngModel min="0" max="10" placeholder="0-10">
         </div>
-        <div class="pure-u-1-2">
+        <div class="pure-u-sm-1-2 pure-u-1 label">
           <label for="health">
             Health
           </label>
          </div>
-        <div class="pure-u-1-2">
+        <div class="pure-u-sm-1-2 pure-u-1">
           <input class="card-input" name="health" type="number" ngModel min="0" max="10" placeholder="0-10">
         </div>
-        <div class="pure-u-1-2">
-          <button class="submit-button color__white background__orange">Submit</button>
+        <div class="pure-u-1 ">
+          <div class="submit-button">
+            <button class="button color__white background__grey" ngDisabled="loading.cards">
+              Submit 
+            </button>
+            <span *ngIf="loading.cards" class="loading"></span>
+            <span *ngIf="loading.cards" class="color__white">Loading...</span>
+          </div>
         </div>
       </div>
     </form>

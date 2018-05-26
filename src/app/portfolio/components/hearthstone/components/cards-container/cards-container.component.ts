@@ -10,7 +10,8 @@ import { cards } from '../../interfaces/cardsCollection';
 export class CardsContainerComponent implements OnInit {
 
   @Input() cards: any;
-
+  
+  cardLimit: number = 5;
   cardsToDisplay: {};
 
   constructor() { }
@@ -19,16 +20,11 @@ export class CardsContainerComponent implements OnInit {
   }
 
   ngOnChanges(changes: any) {
-    console.log('change detected in container,', changes);
+    this.cardLimit = 5;
+    // changes.prop contains the old and the new value...
+  }
 
-    // if(changes.cards && this.cards) {
-    //   Object.keys(this.cards).forEach((set) => {
-    //     if(this.cards[set].length) {
-    //       this.cardsToDisplay[set] = this.cards[set]
-    //     }
-    //   })
-    // }
-
-    // console.log('c2d', this.cardsToDisplay)
+  increaseLimit() {
+    this.cardLimit += 5;
   }
 }
