@@ -17,6 +17,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CardsContainerComponent } from './portfolio/components/hearthstone/components/cards-container/cards-container.component';
 import { KeysPipe } from './keys.pipe';
 import { CardComponent } from './portfolio/components/hearthstone/components/card/card.component';
+import { InfoComponent } from './common/info/info.component';
 
 const appRoutes: Routes = [
   { path: '',
@@ -53,7 +54,8 @@ const appRoutes: Routes = [
     InputFormComponent,
     CardsContainerComponent,
     KeysPipe,
-    CardComponent
+    CardComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

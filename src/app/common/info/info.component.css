@@ -1,0 +1,25 @@
+.info-icon {
+    float: right;
+    color: #FFE74C;
+}
+
+.info-container__expand {
+    max-height:auto;
+    overflow: hidden;
+}
+
+.info-container__collapse {
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* @keyframes expand {
+    0% {max-height: 0;}
+    100% {max-height: 100%;};
+}
+
+@keyframes collapse {
+    0% {max-height: 100%;}
+    100% {max-height: 0;};
+} */
+
