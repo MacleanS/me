@@ -13,15 +13,11 @@ export class HearthstoneService {
 
   getFilteredCards(params) {
 
-    // let params = new HttpParams();
-
-
-    
     return this.http.get("http://localhost:3000/api/card", {params: params})
   }
 
-  getByClass(className: string) {
-    return this.http.get('http://localhost:3000/api/class/' + className)
+  getByClass(className: string, params) {
+    return this.http.get('http://localhost:3000/api/class/' + className, {params: params})
   }
 
   getByType(type: string) {

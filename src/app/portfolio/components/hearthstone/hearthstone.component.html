@@ -3,8 +3,7 @@
   <img class="hearthstone-header__image" src="../../../../assets/img/hearthstone.png">
 </div>
 <div class="pure-g">
-  <div class="pure-u-lg-1-4 pure-u-1"></div>
-  <div class="pure-u-lg-1-2 pure-u-1">
+  <div class="pure-u-1">
     <p class="color__white">Enter some values between 0 and 10 in the inputs below to retrieve all cards with the specified attributes. 
       Bear in mind that the higher the card's attack/health, the higher the cost. For example, a 7/7 will cost around 7. 
       You probably won't find a 7/7 for 1. The only required input is the cost, feel free to leave the others blank. 
@@ -12,9 +11,9 @@
     <app-input-form
       (change)="cardsChanged($event)">
     </app-input-form>
+    <div class="error" *ngIf="error.message">Oops! Try again - {{ error.message }}</div>
     <app-cards-container 
       [cards]="cardsToDisplay">
     </app-cards-container>
   </div>
-  <div class="pure-u-lg-1-4 pure-u-1"></div>
 </div>

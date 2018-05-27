@@ -24,6 +24,8 @@ export class InputFormComponent implements OnInit {
   constructor(private hearthstoneService: HearthstoneService) { }
 
   ngOnInit() {
+    this.getCardInfo();
+    console.log(this.cardInfo);
   }
 
   getCardInfo() {
@@ -50,15 +52,25 @@ export class InputFormComponent implements OnInit {
     let params = new HttpParams();
 
     for (let key in f.value) {
-      if(f.value[key])
+      if(f.value[key] && key !== 'class')
         params = params.append(key, f.value[key]);
     }
 
-    this.hearthstoneService.getFilteredCards(params).subscribe( data => {
-      this.loading.cards = false;
-      this.cardsToDisplay = data;
-      this.change.emit(this.cardsToDisplay);
-    })
+    if(f.value['class']) {
+      this.hearthstoneService.getByClass(f.value['class'], params).subscribe( data => {
+        this.loading.cards = false;
+        this.cardsToDisplay = data;
+        this.cardsToDisplay.dataBy = 'card';
+        this.change.emit(this.cardsToDisplay);
+      })
+    } else {
+      this.hearthstoneService.getFilteredCards(params).subscribe( data => {
+        this.loading.cards = false;
+        this.cardsToDisplay = data;
+        this.cardsToDisplay.dataBy = 'set';
+        this.change.emit(this.cardsToDisplay);
+      })
+    }
   }
 
   @Output()

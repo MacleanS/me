@@ -7,6 +7,9 @@ app-input-form {
     padding: 1em;
 }
 
+.error {
+    color: #d82b2b;
+}
 .hearthstone-header__image {
     height:100%;
 }

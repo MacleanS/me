@@ -1,5 +1,5 @@
 <div class="pure-g">
-  <div class="pure-u-sm-1-2 pure-u-1 pure-u-lg-1-4">
+  <div class="pure-u-sm-1-2 pure-u-1">
     <form #f="ngForm" (ngSubmit)="submit(f)">
       <div class="pure-g">
         <div class="pure-u-sm-1-2 pure-u-1 label">
@@ -25,10 +25,24 @@
           </label>
          </div>
         <div class="pure-u-sm-1-2 pure-u-1">
-          <input class="card-input" name="health" type="number" ngModel min="0" max="10" placeholder="0-10">
+          <input class="card-input" name="health" type="number" ngModel min="1" max="10" placeholder="1-10">
         </div>
-        <div class="pure-u-1 ">
-          <div class="submit-button">
+        <div class="pure-u-sm-1-2 pure-u-1 label">
+            <label for="class">
+              Class
+            </label>
+           </div>
+          <div class="pure-u-sm-1-2 pure-u-1">
+            <div class="loading-container">
+              <span *ngIf="loading.allInfo" class="loading"></span>
+              <span *ngIf="loading.allInfo" class="color__white">Loading...</span>
+              <select name="class" class="card-input" *ngIf="cardInfo" ngModel>
+                <option class="background__grey" *ngFor="let class of cardInfo.classes">{{ class }}</option>
+              </select>
+            </div>
+          </div>
+        <div class="pure-u-1">
+          <div class="loading-container">
             <button class="button color__white background__grey" ngDisabled="loading.cards">
               Submit 
             </button>

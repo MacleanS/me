@@ -20,6 +20,7 @@ export class HearthstoneComponent implements OnInit {
   private cardInfo = {}
   private cards = {}
   private cardsToDisplay: any = [];
+  private error: any = {};
 
   constructor() { }
 
@@ -27,22 +28,40 @@ export class HearthstoneComponent implements OnInit {
     // this.getCard();
   }
 
-  isCardCollection(object: any): object is cards {
-    // really basic check to see if event is card collection...
-    return 'Basic' in object;
-  }
+  // isCardCollection(object: any): object is cards {
+  //   // really basic check to see if event is card collection...
+  //   return 'Basic' in object || object[0];
+  // }
 
   cardsChanged(event) {
+    
+    console.log(event);
+    this.error = {};
+
+    if(event.error) {
+      this.cardsToDisplay = [];
+      this.error = {
+        error: event.error,
+        message: event.message
+      }
+      return;
+    }
     // flatten data object into more usable format
-    if(this.isCardCollection(event)) {
+    if(event.dataBy) {
       let cardsArray = [];
-
-      Object.keys(event).forEach(function(set) {
-        event[set].forEach(function(card) {
-          cardsArray.push(card)
+      if(event.dataBy==='set') {
+  
+        Object.keys(event).forEach(function(set) {
+          if(set!=='dataBy') {
+            event[set].forEach(function(card) {
+              cardsArray.push(card)
+            })
+          }
         })
-      })
-
+  
+      } else if(event.dataBy==='card'){
+          cardsArray = event;
+      }
       this.cardsToDisplay = cardsArray;
     }
   }

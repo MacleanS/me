@@ -22,7 +22,7 @@ label {
     border: #f1e3ca 3px solid;
 }
 
-.submit-button {
+.loading-container {
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -39,8 +39,8 @@ router.get('/card', (req, res) => {
 });
 
 // This really needs sorting out, not sure how to do it at the moment
-router.get('/class/mage', (req, res) => {
-  unirest.get(HS_Url + "/cards/classes/Mage")
+router.get('/class/Mage', (req, res) => {
+  unirest.get(HS_Url + "/cards/classes/Mage?" + serialise(req.query))
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
   .end(function (result) {
@@ -48,8 +48,8 @@ router.get('/class/mage', (req, res) => {
   });
 });
 
-router.get('/class/rogue', (req, res) => {
-  unirest.get(HS_Url + "/cards/classes/Rogue")
+router.get('/class/Rogue', (req, res) => {
+  unirest.get(HS_Url + "/cards/classes/Rogue?" + serialise(req.query))
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
   .end(function (result) {
@@ -57,8 +57,8 @@ router.get('/class/rogue', (req, res) => {
   });
 });
 
-router.get('/class/shaman', (req, res) => {
-  unirest.get(HS_Url + "/cards/classes/Shaman")
+router.get('/class/Shaman', (req, res) => {
+  unirest.get(HS_Url + "/cards/classes/Shaman?" + serialise(req.query))
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
   .end(function (result) {
@@ -66,8 +66,8 @@ router.get('/class/shaman', (req, res) => {
   });
 });
 
-router.get('/class/warrior', (req, res) => {
-  unirest.get(HS_Url + "/cards/classes/Warrior")
+router.get('/class/Warrior', (req, res) => {
+  unirest.get(HS_Url + "/cards/classes/Warrior?" + serialise(req.query))
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
   .end(function (result) {
@@ -75,8 +75,8 @@ router.get('/class/warrior', (req, res) => {
   });
 });
 
-router.get('/class/druid', (req, res) => {
-  unirest.get(HS_Url + "/cards/classes/Druid")
+router.get('/class/Druid', (req, res) => {
+  unirest.get(HS_Url + "/cards/classes/Druid?" + serialise(req.query))
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
   .end(function (result) {
@@ -84,8 +84,8 @@ router.get('/class/druid', (req, res) => {
   });
 });
 
-router.get('/class/warlock', (req, res) => {
-  unirest.get(HS_Url + "/cards/classes/Warlock")
+router.get('/class/Warlock', (req, res) => {
+  unirest.get(HS_Url + "/cards/classes/Warlock?" + serialise(req.query))
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
   .end(function (result) {
@@ -93,8 +93,8 @@ router.get('/class/warlock', (req, res) => {
   });
 });
 
-router.get('/class/priest', (req, res) => {
-  unirest.get(HS_Url + "/cards/classes/Priest")
+router.get('/class/Priest', (req, res) => {
+  unirest.get(HS_Url + "/cards/classes/Priest?" + serialise(req.query))
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
   .end(function (result) {
@@ -102,8 +102,8 @@ router.get('/class/priest', (req, res) => {
   });
 });
 
-router.get('/class/paladin', (req, res) => {
-  unirest.get(HS_Url + "/cards/classes/Paladin")
+router.get('/class/Paladin', (req, res) => {
+  unirest.get(HS_Url + "/cards/classes/Paladin?" + serialise(req.query))
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
   .end(function (result) {
@@ -111,8 +111,17 @@ router.get('/class/paladin', (req, res) => {
   });
 });
 
-router.get('/class/hunter', (req, res) => {
-  unirest.get(HS_Url + "/cards/classes/Hunter")
+router.get('/class/Hunter', (req, res) => {
+  unirest.get(HS_Url + "/cards/classes/Hunter?" + serialise(req.query))
+  .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
+  .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
+  .end(function (result) {
+    res.send(result.body);
+  });
+});
+
+router.get('/class/Death Knight', (req, res) => {
+  unirest.get(HS_Url + "/cards/classes/Death Knight?" + serialise(req.query))
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")
   .end(function (result) {
