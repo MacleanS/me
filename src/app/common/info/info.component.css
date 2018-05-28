@@ -1,25 +1,58 @@
+.info-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.info {
+    position: relative;
+    margin: auto;
+    padding: 1.5em;
+    border: 1px solid #888;
+    width: 70%;
+    top: 10em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 .info-icon {
     float: right;
-    color: #FFE74C;
+    font-size: 2em;
 }
 
-.info-container__expand {
-    max-height:auto;
-    overflow: hidden;
+.info--footer {
+    text-align: left;
 }
 
-.info-container__collapse {
-    max-height: 0;
-    overflow: hidden;
+.info--footer {
+    text-align: right;
 }
 
-/* @keyframes expand {
-    0% {max-height: 0;}
-    100% {max-height: 100%;};
+.close-button{
+    font-size: 2em;
+    right: 8px;
+    position: absolute;
+    top: 5px;
+}
+/* 
+.info-container__appear {
+    animation: appear 0.3s ease-out;
 }
 
-@keyframes collapse {
-    0% {max-height: 100%;}
-    100% {max-height: 0;};
+.info-container__disappear {
+    animation: disappear 0.3s ease-out;
+}
+
+@keyframes appear {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+@keyframes disappear {
+    from {top:0; opacity:1}
+    to {top:-300px; opacity:0}
 } */
 

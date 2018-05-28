@@ -11,6 +11,10 @@ body {
     margin: 0;
 }
 
+body.modal-open {
+    overflow: hidden;
+}
+
 /* Colour palette */
 .background__white {
     background: #fff;

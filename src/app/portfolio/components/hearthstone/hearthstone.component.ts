@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { HearthstoneService } from '../../../services/hearthstone/hearthstone.service';
 import { HttpParams } from '@angular/common/http';
 import { cards } from './interfaces/cardsCollection';
@@ -11,6 +11,8 @@ import { cards } from './interfaces/cardsCollection';
 })
 
 export class HearthstoneComponent implements OnInit {
+
+  @Input() info: any;
 
   private loading = {
     allInfo: false,

@@ -1,6 +1,19 @@
-<i class="fas fa-info-circle info-icon" (click)="toggleInfo()"></i>
-<div class="info-container">
-    <div class="info" *ngIf="showInfo"  [ngClass]="showInfo ? 'info-container__expand' : 'info-container__collapse'">
-        {{ info }}
+<i class="fas fa-info-circle info-icon color__orange" (click)="toggleInfo()"></i>
+<div class="info-container" *ngIf="showInfo" (click)="toggleInfo()" [@fadeAnimation]="showInfo">
+    <div class="info background__grey--gradient color__white" [@enterAnimation]="showInfo">
+        <div class="info--header">
+            <span class="close-button" (click)="toggleInfo()"><i class="fa fa-window-close" aria-hidden="true"></i></span>
+            <h1>{{ info.header }}</h1>
+        </div>
+        <div class="info--body">
+            <p>
+                {{ info.body }}
+            </p>
+        </div>
+        <div class="info--footer">
+            <p><em>{{ info.footer }} <a *ngIf="info.website" target="_blank" href="{{ info.website }}" class="color__orange">the webite</a></em></p>
+        </div>
     </div>
 </div>
+
+<!-- [ngClass]="showInfo ? 'info-container__appear' : 'info-container__disappear'" -->
