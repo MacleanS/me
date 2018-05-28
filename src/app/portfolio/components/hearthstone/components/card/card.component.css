@@ -22,8 +22,89 @@
     padding: 1em 2em 0 1em;
     overflow: auto;
 }
+
 .card__error {
-    height: 410px;
-    width: 289px;
-    padding-top: 3em;    
+    height: 25em;
+    width: 18em;
+    padding-top: 3em;
+}
+
+@media only screen and (max-width: 910px) {
+    .card {
+        background: url('../../../../../../assets/img/hearthstone-background.jpg');
+        background-size:     contain;
+        background-repeat:   no-repeat;
+        background-position: left;
+        width: 700px;
+        height: 393px;
+    }
+
+    img {
+        height: 24em;
+    }
+    
+    .card__error {
+        height: 21em;
+        width: 15.5em;
+        padding-top: 3em;
+    }
+
+    .card__image {
+        position: relative;
+        bottom: 1em;
+        left: 2em;
+    }
+    
+    .card__info {
+        box-shadow: #1f282b -3px 1px 12px 5px;
+        position: relative;
+        height: 17em;
+        background: url('../../../../../../assets/img/parchment.png');
+        /* margin: 4em 3em 5em 7em; */
+        padding: 1em 2em 0 1em;
+        overflow: auto;
+        margin-left: 80px;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .card {
+        background: url('../../../../../../assets/img/hearthstone-background.jpg');
+        background-size:     contain;
+        background-repeat:   no-repeat;
+        background-position: left;
+        width: 480px;
+        height: 270px;
+    }
+
+    img {
+        height: 17em;
+    }
+    
+    .card__error{
+        padding-top: 2.5em;
+        height: 14.5em;
+        width: 10.5em;
+    }
+
+    .card__image {
+        position: relative;
+        bottom: 1em;
+        left: 2em;
+    }
+    
+    .card__info {
+        box-shadow: #1f282b -3px 1px 12px 5px;
+        position: relative;
+        background: url('../../../../../../assets/img/parchment.png');
+        /* margin: 4em 3em 5em 7em; */
+        padding: 1em 2em 0 1em;
+        overflow: auto;
+        margin-left: 40px;
+        font-size: smaller;
+        width: 10em;
+        height: 13em;
+        margin-top: 40px;
+    }
 }
