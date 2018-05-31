@@ -1,0 +1,21 @@
+<div class="hobby background__mint--gradient color__grey">
+  <div class="hobby__header color__white">
+    <h2>{{ name }}</h2>
+  </div>
+  <div class="hobby__body">
+    <div class="pure-g" [ngClass]="{inverse: inverse}">
+      <div class="pure-u-xl-1-3 pure-u-1">
+        <div class="hobby__body--image">
+            <i class="{{ image }} color__white"></i>
+        </div>
+      </div>
+      <div class="pure-u-xl-2-3 pure-u-1">
+        <div class="hobby__body--info color__white" [ngClass]="{inverse: inverse}">
+          <p>
+            {{ info }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

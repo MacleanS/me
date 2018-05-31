@@ -31,7 +31,10 @@ export class InputFormComponent implements OnInit {
   getCardInfo() {
     this.loading.allInfo = true;
     this.hearthstoneService.getAllCardInfo().subscribe(data => {
-      this.cardInfo = data;
+      let cardInfo = data;
+      // remove faux classes - shouldn't be hardcoded, but the API shouldn't really return these as classes!
+      cardInfo['classes'] = cardInfo['classes'].filter(cls => cls !== 'Death Knight' && cls !== 'Dream' && cls !== 'Neutral');
+      this.cardInfo = cardInfo;
       this.loading.allInfo = false;
     })
   }

@@ -18,6 +18,7 @@ import { CardsContainerComponent } from './portfolio/components/hearthstone/comp
 import { KeysPipe } from './keys.pipe';
 import { CardComponent } from './portfolio/components/hearthstone/components/card/card.component';
 import { InfoComponent } from './common/info/info.component';
+import { HobbyComponent } from './about/components/hobby/hobby.component';
 
 const appRoutes: Routes = [
   { path: '',
@@ -55,7 +56,8 @@ const appRoutes: Routes = [
     CardsContainerComponent,
     KeysPipe,
     CardComponent,
-    InfoComponent
+    InfoComponent,
+    HobbyComponent
   ],
   imports: [
     BrowserModule,

@@ -37,7 +37,7 @@ export class HearthstoneComponent implements OnInit {
 
   cardsChanged(event) {
     
-    console.log(event);
+    // console.log(event);
     this.error = {};
 
     if(event.error) {

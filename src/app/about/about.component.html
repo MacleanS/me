@@ -1,3 +1,22 @@
-<p>
-  This is about me...
-</p>
+<div class="pure-g">
+  <div class="pure-u-lg-1-4 pure-u-1"></div>
+  <div class="pure-u-lg-1-2 pure-u-1">
+    <div class="header-content">
+        <p>
+          I'm a creature of habit, and have four main (and conflicting) hobbies which I do in my spare time.
+        </p>
+      </div>
+      <div class="main-content">
+          <app-hobby *ngFor="let hobby of hobbies"
+                      [name]="hobby.name"
+                      [info]="hobby.info"
+                      [image]="hobby.image"
+                      [inverse]="hobby.inverse">
+          </app-hobby>
+      </div>
+      <div class="footer-content">
+      
+      </div>
+    </div>
+  <div class="pure-u-1-lg-4 pure-u-1"></div>
+</div>

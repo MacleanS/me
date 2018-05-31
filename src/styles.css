@@ -21,7 +21,7 @@ body.modal-open {
 }
 
 .background__mint {
-    background: #25f3b2;
+    background: #1abc9c;
 }
 
 .background__pink {
@@ -42,6 +42,10 @@ body.modal-open {
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.background__mint--gradient {
+    background-image: linear-gradient(to left, #1abc9c, #1aa688, #189075, #167b63, #126751);
+}
+
 .background__orange {
     background: #EEB868;
 }
@@ -54,7 +58,7 @@ body.modal-open {
 }
 
 .color__mint {
-    color: #25f3b2;
+    color: #1abc9c;
 }
 
 .color__pink {
