@@ -8,31 +8,16 @@
 }
 
 .main-header__image {
-    border-radius: 5em;
+    border-radius: 8em;
+    height: 15em;
 }
 
 .blurb {
     font-size: 20px;
+    height: 100%;
     display: flex;
-    align-items: center;
-}
-
-.skills-container__skills-list {
-    text-align: center;
-}
-
-.skills-container__skill-image {
-    font-size: 50px;
-}
-
-.skills-container__skill{
-    display: inline-block;
-    padding: 0 2em;
-}
-
-hr {
-    width: 50%;
-    border-color: #EEB868;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Animation for face and blurb */

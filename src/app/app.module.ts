@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
+import { IntroductionComponent } from './introduction/introduction.component';
 import { SkillsService } from './services/skills/skills.service';
 import { HearthstoneService } from './services/hearthstone/hearthstone.service'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,29 +19,31 @@ import { KeysPipe } from './keys.pipe';
 import { CardComponent } from './portfolio/components/hearthstone/components/card/card.component';
 import { InfoComponent } from './common/info/info.component';
 import { HobbyComponent } from './about/components/hobby/hobby.component';
+import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
+import { SkillsComponent } from './skills/skills.component';
 
-const appRoutes: Routes = [
-  { path: '',
-    redirectTo: '/',
-    pathMatch: 'full'
-  },{
-    path: '',
-    component: HomeComponent
-  },{
-    path: 'home',
-    component: HomeComponent
-  },{
-    path: 'about',
-    component: AboutComponent
-  },{
-    path: 'contact',
-    component: ContactComponent
-  },{
-    path: 'portfolio',
-    component: PortfolioComponent
-  }
-  // { path: '**', component: PageNotFoundComponent }
-];
+// const appRoutes: Routes = [
+//   { path: '',
+//     redirectTo: '/',
+//     pathMatch: 'full'
+//   },{
+//     path: '',
+//     component: HomeComponent
+//   },{
+//     path: 'home',
+//     component: HomeComponent
+//   },{
+//     path: 'about',
+//     component: AboutComponent
+//   },{
+//     path: 'contact',
+//     component: ContactComponent
+//   },{
+//     path: 'portfolio',
+//     component: PortfolioComponent
+//   }
+//   // { path: '**', component: PageNotFoundComponent }
+// ];
 
 
 @NgModule({  
@@ -49,7 +51,7 @@ const appRoutes: Routes = [
     AppComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent,
+    IntroductionComponent,
     PortfolioComponent,
     HearthstoneComponent,
     InputFormComponent,
@@ -57,7 +59,8 @@ const appRoutes: Routes = [
     KeysPipe,
     CardComponent,
     InfoComponent,
-    HobbyComponent
+    HobbyComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,
@@ -66,10 +69,11 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      // { enableTracing: true } // <-- debugging purposes only
-    )
+    AnimateOnScrollModule.forRoot(),
+    // RouterModule.forRoot(
+    //   appRoutes,
+    //   // { enableTracing: true } // <-- debugging purposes only
+    // )
   ],
   providers: [],
   bootstrap: [AppComponent]
