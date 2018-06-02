@@ -1,0 +1,22 @@
+.timeline-container {
+    color: #233D4D;
+}
+
+.timeline {
+    padding: 3em;
+}
+
+.job-date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline__date {
+    text-align: left;
+}
+
+.timeline__description {
+    text-align: left;
+}

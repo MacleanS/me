@@ -14,54 +14,10 @@
 
 .blurb {
     font-size: 20px;
-    height: 100%;
+    padding-bottom: 2em;
+    margin: 0 3em;
+    min-height: 35em;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
-/* Animation for face and blurb */
-/* .swell-image {
-
-} */
-
-.fade-in-image {
-    animation: FadeInImage 1s ease-out;
-}
-
-.swell-image {
-    animation: SwellImage 1s ease;
-}
-
-.fade-in-text {
-    animation: FadeInText 1s ease-out;
-}
-/* .swing-left {
-    animation: SwingLeft 2s ease;
-} */
-
-/* @keyframes SwellImage {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-} */
-
-@keyframes FadeInImage {
-    0% {opacity: 0; width:100%;}
-    75% {width:100%;}
-    100% {opacity:1;};
-}
-
-@keyframes SwellImage {
-    0% {height:0}
-    50% {height: 240px}
-    80% {height: 200px}
-}
-
-@keyframes FadeInText {
-    from {opacity: 0;}
-    to {opacity:1;}
-}
-/* @keyframes SwingLeft {
-    from {text-align: center;}
-    to {text-align:right;}
-} */

@@ -21,7 +21,17 @@ import { InfoComponent } from './common/info/info.component';
 import { HobbyComponent } from './about/components/hobby/hobby.component';
 import { AnimateOnScrollModule } from 'ng2-animate-on-scroll';
 import { SkillsComponent } from './skills/skills.component';
+import { TimelineComponent } from './timeline/timeline.component';
+import { TimelineDateComponent } from './timeline/components/timeline-date/timeline-date.component';
+import { TimelineDescriptionComponent } from './timeline/components/timeline-description/timeline-description.component';
 
+// aos.ts  
+// import * as animateOnScroll from 'aos';  
+// import { InjectionToken } from '@angular/core';  
+
+// export const aos = animateOnScroll;  
+// // This makes it possible to refer to AOS in Angular, see below
+// export const AosToken = new InjectionToken('AOS');
 // const appRoutes: Routes = [
 //   { path: '',
 //     redirectTo: '/',
@@ -60,7 +70,10 @@ import { SkillsComponent } from './skills/skills.component';
     CardComponent,
     InfoComponent,
     HobbyComponent,
-    SkillsComponent
+    SkillsComponent,
+    TimelineComponent,
+    TimelineDateComponent,
+    TimelineDescriptionComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +88,9 @@ import { SkillsComponent } from './skills/skills.component';
     //   // { enableTracing: true } // <-- debugging purposes only
     // )
   ],
-  providers: [],
+  providers: [ 
+    // { provide: AosToken, useValue: aos }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

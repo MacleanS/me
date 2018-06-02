@@ -13,7 +13,7 @@ export const SKILLS: Skill[] = [
     {area:'backend', name: 'SQL', image:'devicon-mysql-plain'},
     {area:'backend', name: 'PHP', image:'devicon-php-plain'},
     {area:'backend', name: 'Linux', image:'devicon-linux-plain'},
-    // {area:'backend', name: 'npm', image:'devicon-npm-plain'},
+    {area:'backend', name: 'Node JS', image:'devicon-nodejs-plain'},
     {area:'projectManagement', name: 'Git', image:'devicon-git-plain'},
     {area:'projectManagement', name: 'Github', image:'devicon-github-plain'},
     // {area:'projectManagement', name: 'YouTrack', image:'devicon-javascript-plain'},

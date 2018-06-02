@@ -10,7 +10,7 @@
       </div>
     </div>
   </div>
-  <button class="button color__white background__grey" *ngIf="cardLimit <= cards.length && cards"(click)="increaseLimit()">
+  <button class="button color__white background__grey" *ngIf="cardLimit < cards.length && cards"(click)="increaseLimit()">
     Show more cards ({{ cardLimit }} / {{ cards.length }})
   </button>
 </div>

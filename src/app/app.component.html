@@ -1,10 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <nav class="main-nav">
   <div class="main-nav__links">
-    <a href="/home">Home</a> |
-    <a href="/about">About</a> |
-    <a href="/contact">Contact</a> |
-    <a href="/portfolio">Portfolio</a>
+    <a href="#me">Me</a> |
+    <a href="#skills">Skills</a> |
+    <a href="#timeline">Work</a> |
+    <a href="#about">About</a> |
+    <a href="#portfolio">Portfolio</a> |
+    <a href="#contact">Contact</a>
   </div>
   
   <div class="main-nav__hamburger">
@@ -14,23 +16,27 @@
 
 <!-- <router-outlet></router-outlet> -->
 
-<section class="introduction background__grey--gradient">
+<section id="me" class="me background__grey--gradient">
   <app-introduction></app-introduction>
 </section>
 
-<section class="skills background__mint--gradient">
+<section id="skills" class="skills background__mint--gradient">
   <app-skills></app-skills>
 </section>
 
-<section class="about background__orange--gradient">
+<section id="timeline" class="timeline background__yellow--gradient">
+  <app-timeline></app-timeline>
+</section>
+
+<section id="about" class="about background__orange--gradient">
   <app-about></app-about>
 </section>
 
-<section class="portfolio background__pink--gradient">
+<section id="portfolio" class="portfolio background__pink--gradient">
   <app-portfolio></app-portfolio>
 </section>
 
-<section class="contact">
+<section id="contact" class="contact">
   <app-contact></app-contact>
 </section>
 
