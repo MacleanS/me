@@ -1,5 +1,8 @@
 .main-nav {
     position: fixed;
+    width: 100%;
+    background: rgba(40, 72, 87, 0.5);
+    z-index: 1;
 }
 
 .main-banner {
@@ -8,4 +11,85 @@
 
 .section-header{
     font-size: 3.5em;
+}
+
+.main-nav a {
+    color:white;
+    padding: 0 1em;
+}
+
+.main-nav__hamburger {
+    display: none;
+}
+
+.main-nav__links {
+    display: flex;
+    flex-direction: row;
+    height: 3em;
+    align-items: center;
+}
+
+@media only screen and (max-width: 640px) {
+
+    .main-nav__links {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .main-nav__links a {
+        display: none;
+    }
+
+    .main-nav__links a.main-nav__hamburger {
+      float: right;
+      display: block;
+    }
+
+    .main-nav__close {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+
+    .main-nav__links.menu-expanded {
+        position: relative;
+        background: rgba(40, 72, 87, 0.5);
+        overflow: hidden;
+        animation: slideDown 0.5s;
+    }
+
+    .main-nav__hamburger {
+        display: block;
+        position: absolute;
+        right: 1em;
+        top: 1em;
+        cursor: pointer;
+    }
+
+    .main-nav__links.menu-expanded a{
+        float: none;
+        display: block;
+        text-align: left;
+        padding: 0.5em;
+    }
+}
+
+@keyframes slideDown{
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp{
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-100%);
+    }
 }

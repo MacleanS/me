@@ -1,42 +1,44 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<nav class="main-nav">
-  <div class="main-nav__links">
-    <a href="#me">Me</a> |
-    <a href="#skills">Skills</a> |
-    <a href="#timeline">Work</a> |
-    <a href="#about">About</a> |
-    <a href="#portfolio">Portfolio</a> |
+<nav class="main-nav background__grey--gradient">
+  <div class="main-nav__links" [ngClass]="{'menu-expanded': menuVisible}">
+    <a href="#me">Me</a>
+    <a href="#skills">Skills</a>
+    <a href="#timeline">Work</a>
+    <a href="#about">About</a>
+    <a href="#portfolio">Portfolio</a>
     <a href="#contact">Contact</a>
-  </div>
-  
-  <div class="main-nav__hamburger">
-    <div>=</div>
+    <a class="main-nav__hamburger" (click)="toggleMenu()" *ngIf="!menuVisible">
+        <i class="fas fa-bars"></i>
+    </a>
+    <a class="main-nav__close" (click)="closeMenu()" *ngIf="menuVisible">
+        <i class="fas fa-times"></i>
+    </a>
   </div>
 </nav>
 
 <!-- <router-outlet></router-outlet> -->
-
-<section id="me" class="me background__grey--gradient">
-  <app-introduction></app-introduction>
-</section>
-
-<section id="skills" class="skills background__mint--gradient">
-  <app-skills></app-skills>
-</section>
-
-<section id="timeline" class="timeline background__yellow--gradient">
-  <app-timeline></app-timeline>
-</section>
-
-<section id="about" class="about background__orange--gradient">
-  <app-about></app-about>
-</section>
-
-<section id="portfolio" class="portfolio background__pink--gradient">
-  <app-portfolio></app-portfolio>
-</section>
-
-<section id="contact" class="contact">
-  <app-contact></app-contact>
-</section>
-
+<div class="content" (click)="closeMenu()">
+  <section id="me" class="me background__grey--gradient">
+    <app-introduction></app-introduction>
+  </section>
+  
+  <section id="skills" class="skills background__mint--gradient">
+    <app-skills></app-skills>
+  </section>
+  
+  <section id="timeline" class="timeline background__yellow--gradient">
+    <app-timeline></app-timeline>
+  </section>
+  
+  <section id="about" class="about background__orange--gradient">
+    <app-about></app-about>
+  </section>
+  
+  <section id="portfolio" class="portfolio background__pink--gradient">
+    <app-portfolio></app-portfolio>
+  </section>
+  
+  <section id="contact" class="contact">
+    <app-contact></app-contact>
+  </section>
+</div>  

@@ -7,7 +7,18 @@ import * as AOS from 'aos';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+
+  menuVisible: boolean = false;
+
   ngOnInit() {
     AOS.init();
+  }
+
+  toggleMenu = () => {
+    this.menuVisible = !this.menuVisible
+  }
+
+  closeMenu = () => {
+    this.menuVisible = false;
   }
 }

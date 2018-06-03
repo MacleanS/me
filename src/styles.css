@@ -118,35 +118,8 @@ body.modal-open {
 .small-font {
     font-size:x-small;
 }
-.main-nav {
-    display: flex;
-    justify-content: right;
-    height: 3em;
-    align-items: center;
-    flex-direction: row-reverse;
-}
-
-.main-nav a {
-    color:white;
-    padding: 0 1em;
-}
-.main-nav .main-nav__hamburger {
-    display: none;
-}
 
 .button {
     padding: 0.5em;
     box-shadow: black 3px 1px 8px 1px;
-}
-
-@media only screen and (max-width: 640px) {
-    .main-nav .main-nav__hamburger {
-        display: block;
-        position: absolute;
-        right: 1em;
-    }
-
-    .main-nav .main-nav__links {
-        display: none;
-    }
 }
