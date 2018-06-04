@@ -1,6 +1,7 @@
 .app-skills {
     height:100%;
     padding-bottom: 2em;
+    overflow-x: hidden;
 }
 
 .skills-container{

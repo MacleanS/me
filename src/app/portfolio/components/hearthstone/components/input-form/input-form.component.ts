@@ -20,12 +20,17 @@ export class InputFormComponent implements OnInit {
   private cardsToDisplay: any;
   private cardInfo: any;
   private validFormState: boolean = true;
+  private showExplanation: boolean = false;
 
   constructor(private hearthstoneService: HearthstoneService) { }
 
   ngOnInit() {
     this.getCardInfo();
     console.log(this.cardInfo);
+  }
+
+  toggleExplanation() {
+    this.showExplanation = !this.showExplanation;
   }
 
   getCardInfo() {
@@ -37,6 +42,13 @@ export class InputFormComponent implements OnInit {
       this.cardInfo = cardInfo;
       this.loading.allInfo = false;
     })
+  }
+
+  clearInput(f: NgForm, field) {
+
+    console.log(f, field)
+
+    f.form.controls[field].reset();
   }
 
   valid(f: NgForm) {

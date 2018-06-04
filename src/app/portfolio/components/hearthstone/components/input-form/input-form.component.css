@@ -7,10 +7,20 @@ label {
     align-items: center;
 }
 
+form {
+    position: relative;
+}
+
 .error {
     color: #d82b2b;
     position: absolute;
+    top: 33px;
+    left: 0;
     padding-top: 1.3em;
+ }
+
+ .clear-input {
+     cursor: pointer;
  }
 
 .card-input {
@@ -40,7 +50,53 @@ label {
     animation: load 2s ease-in-out infinite;
 }
 
+.explanation-box {
+    padding: 0 1em;
+}
+
+.explanation-title {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.devicon-angularjs-plain {
+    font-size: 3em;
+}
+
+.explanation-body {
+    animation: slideDown 0.5s ease-out;
+    max-height: 11em;
+    overflow: auto;
+}
+
+.rotate{
+    -moz-transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    cursor: pointer;
+}
+
+.rotate.rotate-down{
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg);
+}
+
 @keyframes load {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(2880deg); }
+}
+
+@keyframes slideDown{
+    from {
+        transform: translateY(-30%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

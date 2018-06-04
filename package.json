@@ -25,6 +25,7 @@
     "core-js": "^2.5.4",
     "express": "^4.16.3",
     "ng2-animate-on-scroll": "^1.0.8",
+    "nodemailer": "^4.6.5",
     "rapidapi-connect": "0.0.6",
     "rxjs": "^6.2.0",
     "rxjs-compat": "^6.2.0",

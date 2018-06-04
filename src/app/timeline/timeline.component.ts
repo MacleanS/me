@@ -20,7 +20,7 @@ export class TimelineComponent implements OnInit {
         place: 'Kobas',
         role: 'Software Engineer',
         info: `Responsible for developing and maintaining the cloud interface of the Kobas product, which has a wide range of uses. Clients use the product to configure EPoS interfaces, manage staff timesheets, manage products/stock, and retrieve reports on venue performance.
-        The tech stack is AngularJS 1.5+ as well as the classic LAMP stack.`
+        Tech stack: LAMP + AngularJS 1.5+.`
       }
     }, {
       date: 'Nov 2016 - Oct 2017',
@@ -28,7 +28,8 @@ export class TimelineComponent implements OnInit {
       description: {
         place: 'Aimia',
         role: 'Full Stack Developer',
-        info: 'Involved in prototype analytical app development within the "R&D Analytics" team. The team is responsible for quickly developing analytical applications which are typically built in HTML/javaScript (front end), with analytics built in R, SQL, or Python. Current projects include a product recommendation engine, and a campaign execution tool, both which will use machine learning to generate optimal outputs. More recent projects are built using Angular 2 as a framework.' 
+        info: `Involved in prototype analytical app development within the "R&D Analytics" team. The team is responsible for quickly developing analytical applications which are typically built in HTML/CSS/JavaScript (front end), with analytics built in R, SQL, or Python.
+        Projects included a product recommendation engine, and a campaign execution tool, both which used machine learning to generate optimal outputs. More recent projects were built using Angular2.`
       }
     }, {
       date: 'Aug 2014 - Nov 2016',

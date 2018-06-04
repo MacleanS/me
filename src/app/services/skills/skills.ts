@@ -7,7 +7,7 @@ export const SKILLS: Skill[] = [
     {area:'frontend', name: 'HTML', image:'devicon-html5-plain'},
     {area:'frontend', name: 'CSS', image:'devicon-css3-plain'},
     {area:'frontend', name: 'LESS', image:'devicon-less-plain-wordmark'},
-    {area:'frontend', name: 'AngularJS', image:'devicon-angularjs-plain'},
+    {area:'frontend', name: 'AngularJS', image:'devicon-angularjs-plain-wordmark'},
     {area:'frontend', name: 'Angular', image:'devicon-angularjs-plain'},
     {area:'frontend', name: 'Karma & Jasmine', image:'devicon-jasmine-plain'},
     {area:'backend', name: 'SQL', image:'devicon-mysql-plain'},

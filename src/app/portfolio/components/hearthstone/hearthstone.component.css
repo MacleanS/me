@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+.shaded {
+    background: rgba(0,0,0,0.7);
+}
+
 app-input-form {
     padding: 1em;
 }
@@ -22,4 +26,31 @@ app-input-form {
 
 .dropdown-container__dropdown {
     flex-grow: 1;
+}
+
+.hearthstone-section {
+    height:100%;
+    overflow: auto;
+    background-image: url('../../../../assets/img/witchwood-background.jpg');
+    background-attachment: fixed;
+    background-position: top;
+}
+
+.hearthstone-container {
+    padding:3em;
+    min-width: 555px;
+}
+
+.header-content {
+    padding: 3em;
+    min-width: 555px;
+}
+
+@media only screen and (max-width: 640px) {
+    .hearthstone-container {
+        padding: 1em;
+    }
+    .header-content {
+        padding: 1em;
+    }
 }

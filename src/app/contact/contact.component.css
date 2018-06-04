@@ -1,0 +1,14 @@
+textarea {
+    resize: vertical; /* user can resize vertically, but width is fixed */
+    width: 100%;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.icons-container i {
+    padding-right:1em;
+}

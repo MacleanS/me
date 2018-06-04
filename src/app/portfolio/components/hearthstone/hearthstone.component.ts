@@ -12,13 +12,18 @@ import { cards } from './interfaces/cardsCollection';
 
 export class HearthstoneComponent implements OnInit {
 
-  @Input() info: any;
-
   private loading = {
     allInfo: false,
     cards: false
   };
 
+  private info: any = {
+    header: '',
+    body: '',
+    footer: '',
+    website: ''
+  }
+  
   private cardInfo = {}
   private cards = {}
   private cardsToDisplay: any = [];
@@ -26,8 +31,16 @@ export class HearthstoneComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    // this.getCard();
+ngOnInit() {
+    this.info.header = 'Hearthstone';
+    this.info.body = `Hearthstone is an online card game, designed by Blizzard, which I have a love/hate (mostly hate) relationship with.
+    People describe it as a cross between poker and chess, but I'm quite bitter about it and think it's mostly a
+    random number generator in card form.
+    From Wikipedia: the game is a turn-based card game between two opponents, 
+    using constructed decks of 30 cards along with a selected hero with a unique power. 
+    Players use their limited mana crystals to play abilities or summon minions to attack the opponent, with the goal of reducing the opponent's health to zero.`
+    this.info.footer = 'For more information, visit ';
+    this.info.website = 'https://playhearthstone.com';
   }
 
   // isCardCollection(object: any): object is cards {

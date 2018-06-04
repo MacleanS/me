@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { IntroductionComponent } from './introduction/introduction.component';
@@ -25,40 +26,34 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { TimelineDateComponent } from './timeline/components/timeline-date/timeline-date.component';
 import { TimelineDescriptionComponent } from './timeline/components/timeline-description/timeline-description.component';
 
-// aos.ts  
-// import * as animateOnScroll from 'aos';  
-// import { InjectionToken } from '@angular/core';  
-
-// export const aos = animateOnScroll;  
-// // This makes it possible to refer to AOS in Angular, see below
-// export const AosToken = new InjectionToken('AOS');
-// const appRoutes: Routes = [
-//   { path: '',
-//     redirectTo: '/',
-//     pathMatch: 'full'
-//   },{
-//     path: '',
-//     component: HomeComponent
-//   },{
-//     path: 'home',
-//     component: HomeComponent
-//   },{
-//     path: 'about',
-//     component: AboutComponent
-//   },{
-//     path: 'contact',
-//     component: ContactComponent
-//   },{
-//     path: 'portfolio',
-//     component: PortfolioComponent
-//   }
-//   // { path: '**', component: PageNotFoundComponent }
-// ];
+const appRoutes: Routes = [
+  { path: '',
+    redirectTo: '/',
+    pathMatch: 'full'
+  },{
+    path: '',
+    component: HomeComponent
+  },{
+    path: 'home',
+    component: HomeComponent
+  },{
+    path: 'about',
+    component: AboutComponent
+  }, {
+    path: 'portfolio',
+    component: PortfolioComponent
+  }, {
+    path: 'portfolio/hearthstone',
+    component: HearthstoneComponent
+  }
+  // { path: '**', component: PageNotFoundComponent }
+];
 
 
 @NgModule({  
   declarations: [
     AppComponent,
+    HomeComponent,
     AboutComponent,
     ContactComponent,
     IntroductionComponent,
@@ -83,10 +78,10 @@ import { TimelineDescriptionComponent } from './timeline/components/timeline-des
     FormsModule,
     ReactiveFormsModule,
     AnimateOnScrollModule.forRoot(),
-    // RouterModule.forRoot(
-    //   appRoutes,
-    //   // { enableTracing: true } // <-- debugging purposes only
-    // )
+    RouterModule.forRoot(
+      appRoutes,
+      // { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   providers: [ 
     // { provide: AosToken, useValue: aos }

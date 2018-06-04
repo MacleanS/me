@@ -65,6 +65,10 @@ body.modal-open {
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+.background__black--gradient {
+    background-image: linear-gradient(to right top, #23272c, #1a2224, #131c1b, #0e1611, #0a0d03);
+}
+
 .background__mint--gradient {
     background-image: linear-gradient(to left, #1abc9c, #1aa688, #189075, #167b63, #126751);
 }
@@ -122,4 +126,10 @@ body.modal-open {
 .button {
     padding: 0.5em;
     box-shadow: black 3px 1px 8px 1px;
+}
+
+@media screen and (max-width: 600px) {
+    .title:after, .title:before {
+        display: none;
+    }
 }

@@ -1,16 +1,12 @@
-.hearthstone-container {
-    padding:3em;
-}
-
 .header-content {
-    padding: 3em;
+    padding-top: 3em;
 }
 
-@media only screen and (max-width: 640px) {
-    .hearthstone-container {
-        padding: 1em;
-    }
-    .header-content {
-        padding: 1em;
-    }
+.projects-container {
+    height: 5em;
+    text-align: center;
+}
+
+.hearthstone-image {
+    height: 5em;
 }

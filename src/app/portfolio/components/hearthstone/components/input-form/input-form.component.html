@@ -1,5 +1,5 @@
 <div class="pure-g">
-  <div class="pure-u-1-2">
+  <div class="pure-u-sm-1-2 pure-u-1">
     <form #f="ngForm" (ngSubmit)="submit(f)">
       <div class="pure-g">
         <div class="pure-u-1-2 label">
@@ -8,7 +8,10 @@
           </label>
         </div>  
         <div class="pure-u-1-2">
-          <input class="card-input" name="cost" type="number" ngModel required min="0" max="10" placeholder="0-10">
+          <input class="card-input" name="cost" type="number" ngModel required [attr.min]="0" [attr.max]="10" [min]="0" [max]="10" placeholder="0-10">
+          <span class="clear-input" (click)="clearInput(f, 'cost')">
+              <i class="far fa-times-circle"></i>
+          </span>
           <span *ngIf="!validFormState" class="error">Please enter a cost (between 0 and 10)</span>
         </div>
         <div class="pure-u-1-2 label">
@@ -17,7 +20,10 @@
           </label>
         </div>
         <div class="pure-u-1-2">
-          <input class="card-input" name="attack" type="number" ngModel min="0" max="10" placeholder="0-10">
+          <input class="card-input" name="attack" type="number" ngModel [attr.min]="0" [attr.max]="10" [min]="0" [max]="10" placeholder="0-10">
+          <span class="clear-input" (click)="clearInput(f, 'attack')">
+              <i class="far fa-times-circle"></i>
+          </span>
         </div>
         <div class="pure-u-1-2 label">
           <label for="health">
@@ -25,7 +31,10 @@
           </label>
          </div>
         <div class="pure-u-1-2">
-          <input class="card-input" name="health" type="number" ngModel min="1" max="10" placeholder="1-10">
+          <input class="card-input" name="health" type="number" ngModel [attr.min]="1" [attr.max]="10" [min]="1" [max]="10" placeholder="1-10">
+          <span class="clear-input" (click)="clearInput(f, 'health')">
+              <i class="far fa-times-circle"></i>
+          </span>
         </div>
         <div class="pure-u-1-2 label">
             <label for="class">
@@ -39,6 +48,9 @@
               <select name="class" class="card-input" *ngIf="cardInfo" ngModel>
                 <option class="background__grey" *ngFor="let class of cardInfo.classes">{{ class }}</option>
               </select>
+              <span class="clear-input" (click)="clearInput(f, 'class')">
+                  <i class="far fa-times-circle"></i>
+              </span>
             </div>
           </div>
         <div class="pure-u-sm-1-2 pure-u-1">
@@ -52,5 +64,24 @@
         </div>
       </div>
     </form>
+  </div>
+  <div class="pure-u-sm-1-2 pure-u-1">
+    <div class="explanation-box">
+      <h3 class="explanation-title">
+        Angular <i class="devicon-angularjs-plain colored"></i> Explanation <i class="fas fa-chevron-right rotate" [ngClass]="{'rotate-down': showExplanation}" (click)="toggleExplanation()"></i>
+      </h3>
+      <p class="explanation-body" *ngIf="showExplanation">
+        In this small app, the input form, and the output are separate components. Rather than two-way binding
+        the input parameters to a model within the output component, I am using one-way binding to avoid any object links by reference. 
+        <br>
+        <br>
+        When the input form information is submitted, a call is made to the appropriate <code>HearthstoneService</code> endpoint 
+        (which consumes the RapidAPI Hearthstone API). Once the data is returned, the input form emits an event with the new card information,
+        which is passed up to the main controller. The main controller then passes this new collection down to the output component.
+        <br>
+        <br>
+        This new collection is one-way bound, and so will not change until the user has submitted a new request through the input form.
+      </p>
+    </div> 
   </div>
 </div>
