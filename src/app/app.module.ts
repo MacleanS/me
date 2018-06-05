@@ -25,6 +25,7 @@ import { SkillsComponent } from './skills/skills.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { TimelineDateComponent } from './timeline/components/timeline-date/timeline-date.component';
 import { TimelineDescriptionComponent } from './timeline/components/timeline-description/timeline-description.component';
+import {APP_BASE_HREF} from '@angular/common';
 
 const appRoutes: Routes = [
   { path: '',
@@ -77,15 +78,14 @@ const appRoutes: Routes = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    AnimateOnScrollModule.forRoot(),
+    // AnimateOnScrollModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
       // { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [ 
     // { provide: AosToken, useValue: aos }
-  ],
+  providers: [{provide: APP_BASE_HREF, useValue : './' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

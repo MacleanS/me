@@ -18,9 +18,9 @@ export class InputFormComponent implements OnInit {
   };
 
   private cardsToDisplay: any;
-  private cardInfo: any;
-  private validFormState: boolean = true;
-  private showExplanation: boolean = false;
+  cardInfo: any;
+  validFormState: boolean = true;
+  showExplanation: boolean = false;
 
   constructor(private hearthstoneService: HearthstoneService) { }
 

@@ -4,7 +4,7 @@ const RapidAPI = new require('rapidapi-connect');
 const rapid = new RapidAPI('hearthstone-smaclean_5b044812e4b09d99505e1522', '448862f1-5cc2-44ce-a713-1723244d5e38');
 const unirest = require('unirest');
 const HS_Url = "https://omgvamp-hearthstone-v1.p.mashape.com"
-const nodemailer = require('nodemailer');
+// const nodemailer = require('nodemailer');
 
 // for building URL query from request params
 serialise = function(obj) {
@@ -102,6 +102,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/cardInfo', (req, res) => {
+
   unirest.get(HS_Url + "/info")
   .header("X-Mashape-Key", "S2HBEiFWT6mshMD8uFYFjcQhySIMp1Vam5PjsnwkgvOrmMmTvf")
   .header("X-Mashape-Host", "omgvamp-hearthstone-v1.p.mashape.com")

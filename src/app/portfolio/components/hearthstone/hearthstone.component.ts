@@ -17,7 +17,7 @@ export class HearthstoneComponent implements OnInit {
     cards: false
   };
 
-  private info: any = {
+  info: any = {
     header: '',
     body: '',
     footer: '',
@@ -26,8 +26,8 @@ export class HearthstoneComponent implements OnInit {
   
   private cardInfo = {}
   private cards = {}
-  private cardsToDisplay: any = [];
-  private error: any = {};
+  cardsToDisplay: any = [];
+  error: any = {};
 
   constructor() { }
 
