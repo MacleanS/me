@@ -108,3 +108,23 @@
         margin-top: 40px;
     }
 }
+
+
+@media only screen and (max-width: 500px) {
+    .card {
+       width: 370px;
+    }
+
+    .card-info {
+        margin-left: 25px;
+        width: 8em;
+    }
+
+    img {
+        height: 14em;
+    }
+    .card__image {
+        bottom: -1em;
+        left: 1em;
+    }
+}

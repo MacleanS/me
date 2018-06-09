@@ -1,3 +1,7 @@
+.about-content {
+    padding-bottom: 3em;
+}
+
 .header-content, .main-content {
     /* padding: 0 5em; */
     font-size: 1em;

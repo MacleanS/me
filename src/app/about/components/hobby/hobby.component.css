@@ -1,5 +1,5 @@
 .hobby{
-    box-shadow: 0 0 16px 0 #070708;
+    padding: 1em;
 }
 
 .hobby__header{
@@ -14,22 +14,16 @@
     text-align: center;
 }
 
+.hobby__body--image img {
+    height: 200px;
+}
+
 .hobby__body--info {
-    text-align: left;
+    text-align: center;
+    font-size: 3em;
 }
 
 /* for inverse hobbies */
-.inverse{
+/* .inverse{
     flex-direction: row-reverse;
-}
-
-
-@media only screen and (max-width: 640px) {
-    .hobby__body--image {
-        font-size: 0.5em;
-    }
-    
-    .hobby__body--info {
-        font-size: 0.7em;
-    }
-}
+} */

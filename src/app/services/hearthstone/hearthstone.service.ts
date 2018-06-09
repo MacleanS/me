@@ -8,19 +8,17 @@ export class HearthstoneService {
   constructor(private http: HttpClient) { }
 
   getAllCardInfo() {
-    return this.http.get("http://localhost:3000/api/cardInfo")
+    return this.http.get("/api/cardInfo")
   }
 
   getFilteredCards(params) {
-
-    return this.http.get("http://localhost:3000/api/card", {params: params})
+    return this.http.get("/api/card", {params: params})
   }
-
   getByClass(className: string, params) {
-    return this.http.get('http://localhost:3000/api/class/' + className, {params: params})
+    return this.http.get('/api/class/' + className, {params: params})
   }
 
   getByType(type: string) {
-    return this.http.get('http://localhost:3000/api/type/' + type)
+    return this.http.get('/api/type/' + type)
   }
 }
