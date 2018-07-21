@@ -39,7 +39,7 @@ export class InputFormComponent implements OnInit {
       let cardInfo = data;
       console.log(cardInfo);
       // remove faux classes - shouldn't be hardcoded, but the API shouldn't really return these as classes!
-      // cardInfo['classes'] = cardInfo['classes'].filter(cls => cls !== 'Death Knight' && cls !== 'Dream' && cls !== 'Neutral');
+      cardInfo['classes'] = cardInfo['classes'].filter(cls => cls !== 'Death Knight' && cls !== 'Dream' && cls !== 'Neutral');
       this.cardInfo = cardInfo;
       this.loading.allInfo = false;
     })

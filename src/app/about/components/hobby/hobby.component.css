@@ -15,12 +15,12 @@
 }
 
 .hobby__body--image img {
-    height: 200px;
+    height: 100px;
 }
 
 .hobby__body--info {
     text-align: center;
-    font-size: 3em;
+    font-size: 2em;
 }
 
 /* for inverse hobbies */

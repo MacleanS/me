@@ -17,7 +17,7 @@
     box-shadow: #1f282b -3px 1px 12px 5px;
     position: relative;
     height: 20em;
-    background: url('../../../../../../assets/img/parchment.png');
+    background: url('../../../../../../assets/img/parchment.PNG');
     margin: 4em 3em 5em 7em;
     padding: 1em 2em 0 1em;
     overflow: auto;
@@ -59,7 +59,7 @@
         box-shadow: #1f282b -3px 1px 12px 5px;
         position: relative;
         height: 17em;
-        background: url('../../../../../../assets/img/parchment.png');
+        background: url('../../../../../../assets/img/parchment.PNG');
         /* margin: 4em 3em 5em 7em; */
         padding: 1em 2em 0 1em;
         overflow: auto;
@@ -97,7 +97,7 @@
     .card__info {
         box-shadow: #1f282b -3px 1px 12px 5px;
         position: relative;
-        background: url('../../../../../../assets/img/parchment.png');
+        background: url('../../../../../../assets/img/parchment.PNG');
         /* margin: 4em 3em 5em 7em; */
         padding: 1em 2em 0 1em;
         overflow: auto;
@@ -127,4 +127,36 @@
         bottom: -1em;
         left: 1em;
     }
+}
+
+@media only screen and (max-width: 364px) {
+    .card {
+        width: 330px;
+        background: url('../../../../../../assets/img/hearthstone-background.jpg');
+        background-size:     contain;
+        background-repeat:   no-repeat;
+        background-position: left;
+     }
+ 
+     .card__info {
+        margin-left: 20px;
+        font-size: x-small;
+        width: 9em;
+        height: 14em;
+        margin-top: 60px;
+     }
+ 
+     img {
+         height: 12em;
+     }
+     .card__image {
+         bottom: -2em;
+         left: 1em;
+     }
+
+     .card__error{ 
+        padding-top: 1.25em;
+        height: 10.5em;
+        width: 7.5em;
+     }
 }

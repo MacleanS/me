@@ -22,7 +22,7 @@ export class AboutComponent implements OnInit {
   ngOnInit() {
     this.hobbies = [{
       name: 'Gaming',
-      info: `Massive fantasy RPG fan`,
+      info: `Massive RPG fan`,
       image: '../../../../assets/img/gaming.png',
       inverse: false
     }, {

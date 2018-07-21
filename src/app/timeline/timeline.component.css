@@ -19,7 +19,7 @@
     content: '';
     position: absolute;
     width: 6px;
-    background-color: #233D4D;
+    background-color: #fff;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -41,7 +41,7 @@
     width: 34px;
     height: 34px;
     right: -17px;
-    background-color: #233D4D;
+    background-color: #fff;
     top: 15px;
     border-radius: 50%;
     z-index: 1;
@@ -66,9 +66,9 @@
     width: 0;
     z-index: 1;
     right: 30px;
-    border: medium solid #233D4D;
+    border: medium solid #fff;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent #233D4D;
+    border-color: transparent transparent transparent #fff;
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -80,9 +80,9 @@
     width: 0;
     z-index: 1;
     left: 30px;
-    border: medium solid #233D4D;
+    border: medium solid #fff;
     border-width: 10px 10px 10px 0;
-    border-color: transparent #233D4D transparent transparent;
+    border-color: transparent #fff transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
@@ -92,10 +92,11 @@
 
 /* The actual content */
 .content {
-    background-color: rgba(40, 73, 87, 0.7);
+    background-color: #fff;
     position: relative;
     border-radius: 15px;
-    border: #284957 5px solid;
+    /* border: #fff 2px solid; */
+    color: #284957;
 }
 
 /* Media queries - Responsive timeline on screens less than 600px wide */
@@ -115,9 +116,9 @@
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
         left: 60px;
-        border: medium solid #233D4D;
+        border: medium solid #fff;
         border-width: 10px 10px 10px 0;
-        border-color: transparent #233D4D transparent transparent;
+        border-color: transparent #fff transparent transparent;
     }
 
     /* Make sure all circles are at the same spot */
